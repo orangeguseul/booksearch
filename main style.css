@@ -37,9 +37,11 @@ nav{
     margin-right: 260px;
     color: black;
 }
+p{
+    margin-right: 1080px
+}
 @media screen and (max-width: 600px) {
     .header {
-        margin-left: 85px;
         margin-right: 85px;
     }
     .form{
