@@ -20,7 +20,8 @@
             </div>      
         </div>
         <h1 style="font-family: Arial, Helvetica, sans-serif; vertical-align:top;"></h1>
-        <p id="book" style="margin-left: 744%;"></p>
+        <p id="book"></p><br>
+        <p id="contents">hello world</p><br>
         <p id="author">hello world</p><br>
         <p id="price">hello world</p><br>
         <p id="saleprice">hello world</p><br>
@@ -50,12 +51,17 @@
                             $( "h1" ).empty();
                             $( book ).empty();
                             $( author ).empty();
+                            $( contents ).empty();
                             $( price ).empty();
                             $( saleprice ).empty();
                             $( 판매여부 ).empty();
                             $( "h1" ).append( "<strong>"+msg.documents[0].title+"</strong>" );
-                            $(book).append("<img src='" + msg.documents[0].thumbnail + "'/>");
+                            $( book ).append("<img src='" + msg.documents[0].thumbnail + "'/>");
+                            $( contents ).append( msg.documents[0].contents );
                             $( author ).append( msg.documents[0].authors );
+                            $( price ).append( msg.documents[0].price );
+                            $( saleprice ).append( msg.documents[0].sale_price );
+                            $( 판매여부 ).append( msg.documents[0].status );
                         });
                 });
             });             
