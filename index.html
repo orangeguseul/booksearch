@@ -20,7 +20,7 @@
             </div>      
         </div>
         <h1 style="font-family: Arial, Helvetica, sans-serif; vertical-align:top;"></h1>
-        <p id="book"></p><br>
+        <p id="book" class="book image"></p><br>
         <p id="contents">hello world</p><br>
         <p id="author">hello world</p><br>
         <p id="price">hello world</p><br>
@@ -33,6 +33,7 @@
         crossorigin="anonymous"></script>
         <script>
             $(document).ready(function () {
+                $( "p" ).hide();
                 $('#search').click(function () {
                     $.ajax({
                         method: "GET",
@@ -48,6 +49,7 @@
                             console.log(msg.documents[0].price);
                             console.log(msg.documents[0].sale_price);
                             console.log(msg.documents[0].status);
+                            $( "p" ).show();
                             $( "h1" ).empty();
                             $( book ).empty();
                             $( author ).empty();
@@ -57,7 +59,7 @@
                             $( 판매여부 ).empty();
                             $( "h1" ).append( "<strong>"+msg.documents[0].title+"</strong>" );
                             $( book ).append("<img src='" +msg.documents[0].thumbnail+ "'/>");
-                            $( contents ).append( "줄거리:"+msg.documents[0].contents );
+                            $( contents ).append( "줄거리:"+msg.documents[0].contents+"(이하 생략)" );
                             $( author ).append( "작가:"+msg.documents[0].authors );
                             $( price ).append( "가격:"+msg.documents[0].price+"원" );
                             $( saleprice ).append( "할인 가격:"+msg.documents[0].sale_price+"원" );

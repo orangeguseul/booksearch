@@ -37,8 +37,11 @@ nav{
     margin-right: 260px;
     color: black;
 }
+.book image{
+    float: right;
+}
 p{
-    float: left;
+    margin-bottom: 0%;
 }
 @media screen and (max-width: 600px) {
     .header {
