@@ -20,8 +20,8 @@
             </div>      
         </div>
         <h1 style="font-family: Arial, Helvetica, sans-serif; vertical-align:top;"></h1>
-        <p id="book" class="book image"></p><br>
-        <p id="contents">hello world</p><br>
+        <nav><p id="book" class="book image" style="margin-left: 108%;"></p>
+        <p id="contents">hello world</p><br></nav>
         <p id="author">hello world</p><br>
         <p id="price">hello world</p><br>
         <p id="saleprice">hello world</p><br>
@@ -34,6 +34,7 @@
         <script>
             $(document).ready(function () {
                 $( "p" ).hide();
+                $( contents ).hide();
                 $('#search').click(function () {
                     $.ajax({
                         method: "GET",
