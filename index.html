@@ -22,12 +22,16 @@
             </div>      
         </div>
         <h1 style="font-family: Arial, Helvetica, sans-serif; vertical-align:top;"></h1>
-        <nav><p id="book" class="book image" style="margin-left: 108%;"></p>
-        <p id="contents">hello world</p><br></nav>
-        <p id="author">hello world</p><br>
-        <p id="price">hello world</p><br>
-        <p id="saleprice">hello world</p><br>
-        <p id="판매여부">hello world</p><br>   
+        <nav  id="AboutBook">
+            <img src="msg.documents[0].thumbnail" alt="책사진">
+                <div class="aboutbook">
+                    <p id="contents">hello world</p><br>
+                    <p id="author">hello world</p><br>
+                    <p id="price">hello world</p><br>
+                    <p id="saleprice">hello world</p><br>
+                    <p id="판매여부">hello world</p><br>   
+                </div>
+        </nav>
     </div>
     <script
         src="https://code.jquery.com/jquery-3.6.0.js"
@@ -35,8 +39,7 @@
         crossorigin="anonymous"></script>
         <script>
             $(document).ready(function () {
-                $( "p" ).hide();
-                $( contents ).hide();
+                $( AboutBook ).hide();
                 $('#search').click(function () {
                     $.ajax({
                         method: "GET",
@@ -52,7 +55,7 @@
                             console.log(msg.documents[0].price);
                             console.log(msg.documents[0].sale_price);
                             console.log(msg.documents[0].status);
-                            $( "p" ).show();
+                            $( AboutBook ).show();
                             $( "h1" ).empty();
                             $( book ).empty();
                             $( author ).empty();
@@ -61,7 +64,6 @@
                             $( saleprice ).empty();
                             $( 판매여부 ).empty();
                             $( "h1" ).append( "<strong>"+msg.documents[0].title+"</strong>" );
-                            $( book ).append("<img src='" +msg.documents[0].thumbnail+ "'/>");
                             $( contents ).append( "줄거리:"+msg.documents[0].contents+"(이하 생략)" );
                             $( author ).append( "작가:"+msg.documents[0].authors );
                             $( price ).append( "가격:"+msg.documents[0].price+"원" );

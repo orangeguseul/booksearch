@@ -29,13 +29,9 @@ body{
     padding-left: 150px;
     padding-right: 150px;
 }
-nav{
-    text-align: center;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 260px;
-    margin-right: 260px;
-    color: black;
+.aboutbook{
+    margin-bottom: 0px;
+    margin-right: 557px;
 }
 @media screen and (max-width: 600px) {
     .header {
