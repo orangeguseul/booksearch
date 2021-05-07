@@ -29,12 +29,18 @@ body{
     padding-left: 150px;
     padding-right: 150px;
 }
-.book text{
+.aboutbook{
     text-align: left;
+}
+.book{
+    text-align: right;
 }
 @media screen and (max-width: 600px) {
     .header {
-        margin-right: 85px;
+         margin-right: 0px;
+         margin-left: 0px;
+         margin-bottom: 50px;
+         margin-top: 50px;
     }
     .form{
         padding-left: 0px;
