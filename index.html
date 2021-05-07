@@ -22,16 +22,16 @@
             </div>      
         </div>
         <h1 style="font-family: Arial, Helvetica, sans-serif; vertical-align:top;"></h1>
-        <nav  id="AboutBook">
-            <img src="msg.documents[0].thumbnail" alt="책사진">
-                <div class="aboutbook">
+        <div id="AboutBook">
+            <p id="book">hello world</p>
+                <div class="book text">
                     <p id="contents">hello world</p><br>
                     <p id="author">hello world</p><br>
                     <p id="price">hello world</p><br>
                     <p id="saleprice">hello world</p><br>
                     <p id="판매여부">hello world</p><br>   
-                </div>
-        </nav>
+                </div>  
+        </div>
     </div>
     <script
         src="https://code.jquery.com/jquery-3.6.0.js"
@@ -69,6 +69,7 @@
                             $( price ).append( "가격:"+msg.documents[0].price+"원" );
                             $( saleprice ).append( "할인 가격:"+msg.documents[0].sale_price+"원" );
                             $( 판매여부 ).append( "판매현황:"+msg.documents[0].status );
+                            $( book ).append("<img src='" +msg.documents[0].thumbnail+ "'/>");
                         });
                 });
             });             
