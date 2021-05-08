@@ -1,0 +1,21 @@
+{
+    "short_name": "booksearch",
+    "name": "책을 검색해 볼까요?",
+    "icons": [
+      {
+        "src": "icon.ico",
+        "type": "ico",
+        "sizes": "192x192"
+      },
+      {
+        "src": "logo 512px.png",
+        "type": "png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#ffa600",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#ffa600"
+  }

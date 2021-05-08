@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="main style.css">
     <meta name="naver-site-verification" content="80ad64f75ee4ef33bdae91ccafc79bd79f9cd38b" />
     <meta name="description" content="책을 안전하고 광고없이 가볍게 검색 할 수 있는 서비스입니다.">
-    
+    <link rel="shortcut icon" href="icon.ico">    
 </head>
 <body>
     <div class="header">
@@ -29,6 +29,11 @@
             <p id="price">hello world</p><br>
             <p id="saleprice">hello world</p><br>
             <p id="판매여부">hello world</p><br>   
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                <button type="button" class="btn btn-primary" id="bookbar">1</button>
+                </div>
+            </div>
         </div>
     </div>
     <script
@@ -53,7 +58,12 @@
                             console.log(msg.documents[0].price);
                             console.log(msg.documents[0].sale_price);
                             console.log(msg.documents[0].status);
-                            $( AboutBook ).show();           
+                            $( AboutBook ).show();
+                            var i = 0;
+                            while(i<msg.length){
+                                $( bookbar ).clone().after("id"+i).text(i);
+                                ++i 
+                            }           
                             $( "h1" ).empty();
                             $( book ).empty();
                             $( author ).empty();
