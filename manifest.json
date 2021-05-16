@@ -26,7 +26,8 @@
       {
         "src": "logo/icon.ico",
         "type": "ico",
-        "sizes": "192x192"
+        "sizes": "192x192",
+        "purpose": "any maskable"
       },
       {
         "src": "logo/logo 512px.png",
@@ -38,5 +39,18 @@
     "background_color": "#ffa600",
     "display": "standalone",
     "scope": "/",
-    "theme_color": "#ffa600"
-  }
+    "theme_color": "#ffa600",
+    "description": "책을 검색하는 서비스임",
+    "screenshots": [
+      {
+        "src": "screenshot/booksearch.cf 1.png",
+        "type": "image/png",
+        "sizes": "540x720"
+      },
+      {
+        "src": "screenshot/booksearch.cf.png",
+        "type": "image/jpg",
+        "sizes": "540x720"
+      }
+    ]
+}
