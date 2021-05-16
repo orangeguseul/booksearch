@@ -22,6 +22,12 @@
 
     gtag('config', 'G-6VSX4D6535');
 </script>
+<script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+</script>
+<script src="index.js"></script>
 </head>
 <body>
     <div class="header">
@@ -43,46 +49,14 @@
             <p id="판매여부">hello world</p><br>   
         </div>
     </div>
-    <script
-        src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-        crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function () {
-                $( AboutBook ).hide();
-                $('#search').click(function () {
-                    $.ajax({
-                        method: "GET",
-                        url: "https://dapi.kakao.com/v3/search/book?target=title",
-                        data: { query: $("#bookName").val() },
-                        headers: {Authorization: "KakaoAK c32e31fac03d0354e04836db13cc4164" }   
-                    })
-                        .done(function (msg) {
-                            console.log(msg.documents[0].title);
-                            console.log(msg.documents[0].thumbnail);
-                            console.log(msg.documents[0].contents);
-                            console.log(msg.documents[0].authors);
-                            console.log(msg.documents[0].price);
-                            console.log(msg.documents[0].sale_price);
-                            console.log(msg.documents[0].status);
-                            $( AboutBook ).show();
-                            $( "h1" ).empty();
-                            $( book ).empty();
-                            $( author ).empty();
-                            $( contents ).empty();
-                            $( price ).empty();
-                            $( saleprice ).empty();
-                            $( 판매여부 ).empty();
-                            $( "h1" ).append( "<strong>"+msg.documents[0].title+"</strong>" );
-                            $( contents ).append( "줄거리:"+msg.documents[0].contents+"(이하 생략)" );
-                            $( author ).append( "작가:"+msg.documents[0].authors );
-                            $( price ).append( "가격:"+msg.documents[0].price+"원" );
-                            $( saleprice ).append( "할인 가격:"+msg.documents[0].sale_price+"원" );
-                            $( 판매여부 ).append( "판매현황:"+msg.documents[0].status );
-                            $( book ).append("<img src='" +msg.documents[0].thumbnail+ "'/>");
-                        });
-                });
-            });             
-        </script>
+    <div id="installContainer" class="hidden">
+        <button id="butInstall" type="button">
+          Install
+        </button>
+      </div>
+      <!-- include the Glitch button to show what the webpage is about and
+            to make it easier for folks to view source and remix -->
+      <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+      <script src="https://button.glitch.me/button.js"></script>
 </body>
 </html>
