@@ -24,12 +24,12 @@
         "type": "image/png"
       },
       {
-        "src": "icon.ico",
+        "src": "logo/icon.ico",
         "type": "ico",
         "sizes": "192x192"
       },
       {
-        "src": "logo 512px.png",
+        "src": "logo/logo 512px.png",
         "type": "png",
         "sizes": "512x512"
       }
