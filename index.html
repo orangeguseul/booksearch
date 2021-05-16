@@ -7,18 +7,20 @@
     <title>booksearch</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="main style.css">
+    <!--네이버 SEO 설정-->
     <meta name="naver-site-verification" content="80ad64f75ee4ef33bdae91ccafc79bd79f9cd38b" />
     <meta name="description" content="책을 안전하고 광고없이 가볍게 검색 할 수 있는 서비스입니다.">
-    <link rel="shortcut icon" href="icon.ico">    
+    <link rel="shortcut icon" href="icon.ico">
+    <!--pwa 메니페스트 연결-->    
     <link rel="manifest" href="manifest.json">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6VSX4D6535"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6VSX4D6535"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-6VSX4D6535');
+    gtag('config', 'G-6VSX4D6535');
 </script>
 </head>
 <body>
@@ -39,11 +41,6 @@
             <p id="price">hello world</p><br>
             <p id="saleprice">hello world</p><br>
             <p id="판매여부">hello world</p><br>   
-            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div class="btn-group me-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-primary" id="bookbar">1</button>
-                </div>
-            </div>
         </div>
     </div>
     <script
@@ -69,11 +66,6 @@
                             console.log(msg.documents[0].sale_price);
                             console.log(msg.documents[0].status);
                             $( AboutBook ).show();
-                            var i = 0;
-                            while(i<msg.length){
-                                $( bookbar ).clone().after("id"+i).text(i);
-                                ++i 
-                            }           
                             $( "h1" ).empty();
                             $( book ).empty();
                             $( author ).empty();
