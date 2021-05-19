@@ -4,22 +4,22 @@
     "description": "책을 검색해 볼까요?",
     "icons": [
       {
-        "src": "https://via.placeholder.com/48",
+        "src": "logo/logo 48px.png",
         "sizes": "48x48",
         "type": "image/png"
       },
       {
-        "src": "https://via.placeholder.com/72",
+        "src": "logo/logo 72px.png",
         "sizes": "72x72",
         "type": "image/png"
       },
       {
-        "src": "https://via.placeholder.com/96",
+        "src": "logo/logo 96px.png",
         "sizes": "96x96",
         "type": "image/png"
       },
       {
-        "src": "https://via.placeholder.com/144",
+        "src": "logo/logo 144px.png",
         "sizes": "144x144",
         "type": "image/png"
       },
