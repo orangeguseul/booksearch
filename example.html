@@ -1,0 +1,33 @@
+2';  v <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test document</title>
+    <style>
+        button {
+            height: 80px; 
+            width: 80px;  
+            font-size: 2em;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            }
+    </style>
+    <script>
+        function share() {
+          var url = encodeURI(encodeURIComponent(myform.url.value));
+          var title = encodeURI(myform.title.value);
+          var shareURL = "https://share.naver.com/web/shareView?url=" + url + "&title=" + title;
+          document.location = shareURL;
+        }
+
+    </script>
+</head>
+<body>
+    <button>hello</button>
+</body>
+</html>
